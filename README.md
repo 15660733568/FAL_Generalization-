@@ -8,7 +8,7 @@ Perspective of Algorithmic Stability]
 ## 🔧 1. Environment Setup
 
 ### Requirements
-* Python >= 3.7
+* Python >= 3.8
 
 ### Installation
 
