@@ -170,43 +170,6 @@ Federated adversarial learning on SUSY (binary classification for high-energy ph
 cd FAL/FAL_SUSY
 python fal_main_susy.py --option1 value1 ...
 ```
-
----
-
-### 7. FalME
-
-Model Ensemble (ME) strategies in federated adversarial learning.
-
-- `FalME_main.py`, `FalME2.py`: Main ensemble scripts
-- `models.py`, `options.py`: Model and configuration
-- `sampling.py`, `update_ME.py`, `utils.py`: Core logic
-- `plot.py`, `plot2.py`: Visualization
-
-#### How to Run
-
-```bash
-cd FalME
-python FalME_main.py --option1 value1 ...
-```
-
----
-
-### 8. FalZO
-Zero-Order optimization in federated learning.
-
-- `FalZO.py`, `federated_main.py`: Main ZO FL scripts
-- `models.py`, `options.py`, `sampling.py`, `update.py`, `utils.py`: Core logic
-- `plot.py`: Visualization
-
-#### How to Run
-
-```bash
-cd FalZO
-python FalZO.py --option1 value1 ...
-```
-
----
-
 ### 9. data/
 Place datasets here. Subfolders for MNIST, SVHN, webspam, etc.
 
