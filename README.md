@@ -13,7 +13,6 @@ conda activate fal_env
 # 2. Install core PyTorch and dependency libraries
 pip install torch torchvision numpy pandas scikit-learn
 pip install matplotlib seaborn tqdm opencv-python
-\end{verbatim}
 
 ## Project Structure
 
