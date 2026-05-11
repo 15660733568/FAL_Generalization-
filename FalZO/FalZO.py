@@ -185,7 +185,7 @@ if __name__ == '__main__':
     os.makedirs('save', exist_ok=True)
     logger = SummaryWriter('logs')
     args = args_parser()
-    args.epsilon_list = [0.0, 0.1, 0.3, 0.5]
+    args.epsilon_list = [0.0, 0.1, 0.3]
     exp_details(args)
     device = 'cuda' if args.gpu else 'cpu'
 
