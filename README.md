@@ -169,7 +169,7 @@ Federated adversarial learning on SUSY (binary classification for high-energy ph
 cd FAL/FAL_SUSY
 python fal_main_susy.py --option1 value1 ...
 ```
-### 9. data/
+### 7. data/
 Place datasets here. Subfolders for MNIST, SVHN, webspam, etc.
 
 ---
