@@ -4,6 +4,33 @@
 import torch.nn as nn
 import copy
 
+def prox_term(model, center_model):
+    """
+    计算近端项 (Proximal Term): (rho/2) * ||w - u||^2
+    用于内循环优化工作模型 w。
+    """
+    prox = 0.0
+    # 遍历所有参数，计算欧几里得距离的平方
+    for param_w, param_u in zip(model.parameters(), center_model.parameters()):
+        prox += torch.sum((param_w - param_u) ** 2)
+    return prox
+
+def step_u(center_model, model, alpha):
+    """
+    外循环更新影子模型 u: u^{t+1} = u^t + alpha * (w^{t+1} - u^t)
+    alpha 对应伪代码中的步长。
+    """
+    with torch.no_grad():
+        for param_u, param_w in zip(center_model.parameters(), model.parameters()):
+            # 执行移动平均更新
+            param_u.data += alpha * (param_w.data - param_u.data)
+
+
+
+
+
+
+
 def train_mea(args, model, train_loader):
     # 1. 初始化: 工作模型 w 和影子模型 u
     w = model
